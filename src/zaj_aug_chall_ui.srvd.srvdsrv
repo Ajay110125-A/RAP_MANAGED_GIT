@@ -1,0 +1,4 @@
+@EndUserText.label: 'Aug Challenge UI'
+define service ZAJ_AUG_CHALL_UI {
+  expose ZAJ_AUG_CHALL_CDS;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service definition for Travel App'
+define service ZUI_TRAVEL_AY_V2 {
+  expose zc_travel_ay_m;
+  expose zc_booking_ay_m;
+  expose ZC_BOOKSUPP_AY_M;
+}
