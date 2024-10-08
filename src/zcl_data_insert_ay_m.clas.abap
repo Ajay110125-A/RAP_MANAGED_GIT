@@ -44,6 +44,8 @@ CLASS zcl_data_insert_ay_m IMPLEMENTATION.
     ).
     COMMIT WORK.
 
+
+
     out->write( |Data is inserted in tables| ).
 
   ENDMETHOD.
