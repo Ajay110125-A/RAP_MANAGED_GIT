@@ -1,5 +1,9 @@
 CLASS zcl_db_log_ay_m DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zi_travel_ay_m.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zcl_db_log_ay_m IMPLEMENTATION.
+
+
+CLASS ZCL_DB_LOG_AY_M IMPLEMENTATION.
 ENDCLASS.

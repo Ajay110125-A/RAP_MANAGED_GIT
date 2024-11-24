@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Travel Interface CDS View'
-define root view entity ZI_TRAVEL_AY_M as select from ZAY_TRAVEL_M
+define root view entity ZI_TRAVEL_AY_M as select from zay_travel_m
 composition [0..*] of ZI_BOOKING_AY_M          as _Booking
   association [0..1] to /DMO/I_Agency            as _Agency   on $projection.AgencyId = _Agency.AgencyID
   association [0..1] to /DMO/I_Customer          as _Customer on $projection.CustomerId = _Customer.CustomerID

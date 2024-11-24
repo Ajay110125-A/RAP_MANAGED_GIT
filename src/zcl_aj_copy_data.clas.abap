@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_aj_copy_data IMPLEMENTATION.
+CLASS ZCL_AJ_COPY_DATA IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
