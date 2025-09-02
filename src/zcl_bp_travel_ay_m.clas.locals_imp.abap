@@ -31,6 +31,8 @@ CLASS lhc_ZI_TRAVEL_AY_M DEFINITION INHERITING FROM cl_abap_behavior_handler.
       IMPORTING keys FOR zi_travel_ay_m~validatestatus.
     METHODS calculatetotalprice FOR DETERMINE ON MODIFY
       IMPORTING keys FOR zi_travel_ay_m~calculatetotalprice.
+    METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
+      IMPORTING REQUEST requested_authorizations FOR zi_travel_ay_m RESULT result.
 
     METHODS earlynumbering_cba_booking FOR NUMBERING
       IMPORTING entities FOR CREATE zi_travel_ay_m\_booking.
@@ -701,6 +703,9 @@ CLASS lhc_ZI_TRAVEL_AY_M IMPLEMENTATION.
         EXECUTE reCalTotalPrice
         FROM CORRESPONDING #( keys ).
 
+  ENDMETHOD.
+
+  METHOD get_global_authorizations.
   ENDMETHOD.
 
 ENDCLASS.
