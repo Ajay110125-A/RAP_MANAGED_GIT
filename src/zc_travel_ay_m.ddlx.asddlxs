@@ -19,9 +19,25 @@ annotate view zc_travel_ay_m with
       type: #IDENTIFICATION_REFERENCE
   },
   {
-      id: 'Booking',
+      id: 'Dates',
       purpose: #STANDARD,
       position: 20,
+      label: 'Dates',
+      type: #IDENTIFICATION_REFERENCE,
+      targetQualifier: 'Date'
+  },
+  {
+      id: 'Amounts',
+      purpose: #STANDARD,
+      position: 30,
+      label: 'Amount',
+      type: #IDENTIFICATION_REFERENCE,
+      targetQualifier: 'Amount'
+  },
+  {
+      id: 'Booking',
+      purpose: #STANDARD,
+      position: 40,
       label: 'Bookings',
       type: #LINEITEM_REFERENCE,
       targetElement: '_Booking'
@@ -43,7 +59,7 @@ annotate view zc_travel_ay_m with
 
   @UI: {
          selectionField: [{ position: 20 }],
-         lineItem: [{ position: 20 }],
+         lineItem: [{ position: 20 } ],
          identification: [{ position: 20 }]
        }
   @Search.defaultSearchElement: true
@@ -73,27 +89,27 @@ annotate view zc_travel_ay_m with
   //    CustomerName;
   @UI: {
           lineItem: [{ position: 40 }],
-          identification: [{ position: 40 }]
+          identification: [{ position: 40,  qualifier: 'Date'}]
         }
   BeginDate;
 
 
   @UI: {
         lineItem: [{ position: 50 }],
-        identification: [{ position: 50 }]
+        identification: [{ position: 50, qualifier: 'Date' }]
       }
   EndDate;
 
 
   @UI: {
-      identification: [{ position: 55 }]
+      identification: [{ position: 55, qualifier: 'Amount' }]
     }
   BookingFee;
 
 
   @UI: {
         lineItem: [{ position: 60 }],
-        identification: [{ position: 60 }]
+        identification: [{ position: 60,  qualifier: 'Amount' }]
       }
   TotalPrice;
 

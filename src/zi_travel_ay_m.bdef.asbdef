@@ -38,7 +38,7 @@ early numbering
       LastChangedBy = last_changed_by;
       LastChangedAt = last_changed_at;
     }
-  validation validateCustomer on save { create; field CustomerId; }
+  validation validateCustomer on save { create; update; field CustomerId; }
   validation validateDates on save { create; field BeginDate, EndDate; }
   validation validateStatus on save { create; field OverallStatus; }
   validation validateBookingFee on save { create; field BookingFee; }

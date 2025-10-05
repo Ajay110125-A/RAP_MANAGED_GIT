@@ -8,7 +8,7 @@
     dataClass: #MIXED
 }
 define view entity ZI_BOOKING_AY_M
-  as select from ZAY_BOOKING_M
+  as select from zay_booking_m
   composition [0..*] of ZI_BOOKSUPP_AY_M         as _BookingSuppl
   association        to parent ZI_TRAVEL_AY_M           as _Travel on  $projection.TravelId = _Travel.TravelId
   association [0..1] to /DMO/I_Carrier           as _Carrier       on  $projection.CarrierId = _Carrier.AirlineID
